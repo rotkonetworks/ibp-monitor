@@ -1,4 +1,4 @@
-FROM --platform=$TARGETPLATFORM node:16-slim as build-stage
+FROM --platform=$TARGETPLATFORM node:18-slim as build-stage
 
 # https://docs.docker.com/build/building/multi-platform/
 ARG BUILDPLATFORM

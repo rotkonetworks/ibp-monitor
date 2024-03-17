@@ -76,6 +76,7 @@ services:
     environment:
       - P2P_PUBLIC_IP=${P2P_PUBLIC_IP}
       - P2P_PUBLIC_HOST=${P2P_PUBLIC_HOST}
+      - DEBUG=libp2p*,gossipsub*
     command: >
       bash -c "node server.js"
     volumes:
@@ -119,5 +120,5 @@ services:
       wait-for-ibp-api-ready:
         condition: service_completed_successfully
 # volumes:
-#   ibp-keys:
-#     name: ibp-keys
+#  ibp-keys:
+#    name: ibp-keys
